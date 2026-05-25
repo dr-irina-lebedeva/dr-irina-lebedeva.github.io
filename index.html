@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irina Lebedeva, PhD — Senior AI Research Engineer</title>
+<meta name="description" content="Senior AI Research Engineer. PhD in Computer Science. Generative AI, LLMs/VLMs, computer vision, and multimodal learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7;
+    --text:#1d1b17;
+    --muted:#6f6a60;
+    --accent:#9a4221;
+    --line:#e6e1d6;
+    --max:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:72px 24px 96px}
+
+  /* header */
+  header{margin-bottom:8px}
+  h1{font-size:40px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+  .role{color:var(--muted);font-size:19px;margin-top:6px}
+  .links{margin-top:18px;font-size:16px;color:var(--muted)}
+  .links a{margin-right:18px}
+
+  /* sections */
+  section{margin-top:52px}
+  h2{
+    font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:22px;
+  }
+  p{margin-bottom:16px}
+  p:last-child{margin-bottom:0}
+
+  /* experience */
+  .job{margin-bottom:30px}
+  .job:last-child{margin-bottom:0}
+  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;align-items:baseline}
+  .job .title{font-weight:600;font-size:19px}
+  .job .when{color:var(--muted);font-size:15px}
+  .job .org{color:var(--accent);font-size:16px;margin-bottom:8px}
+  ul{list-style:none}
+  li{position:relative;padding-left:18px;margin-bottom:7px;color:#3a352d}
+  li::before{content:"–";position:absolute;left:0;color:var(--accent)}
+
+  /* publications */
+  .pub{margin-bottom:16px}
+  .pub .pt{font-weight:500}
+  .pub .pv{color:var(--muted);font-size:15px}
+
+  /* simple lists */
+  .stack p,.edu p{margin-bottom:10px}
+  .label{font-weight:600}
+
+  footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+  @media(max-width:560px){h1{font-size:32px}.wrap{padding:48px 20px 72px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Irina Lebedeva, PhD</h1>
+    <div class="role">Senior AI Research Engineer · Budapest, Hungary</div>
+    <div class="links">
+      <a href="mailto:dr.irina.lebedeva@gmail.com">Email</a>
+      <a href="#">Google Scholar</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I build AI systems that survive contact with production. With a PhD in Computer Science and a research record in generative modeling and computer vision, I work across the full arc — fine-tuning frontier models, designing retrieval pipelines, and shipping low-latency inference services that hold up at scale.</p>
+    <p>My recent work spans LLM and vision-language fine-tuning, diffusion-based image and video generation, and interpretable computer vision. I'm most useful where research, engineering, and product meet: taking an advanced method and making it dependable enough to deploy.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="top"><span class="title">Senior ML Engineer</span><span class="when">2026 — Present</span></div>
+      <div class="org">Raiqon AI · Budapest</div>
+      <ul>
+        <li>Fine-tune LLMs for automotive requirements engineering using Qwen and LoRA.</li>
+        <li>Drove a 30% relative gain in accuracy via synthetic data, hyperparameter tuning, and pipeline work.</li>
+        <li>Deploy scalable LLM inference pipelines with vLLM, LoRAX, and Docker.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="title">Senior ML Engineer</span><span class="when">2025 — 2026</span></div>
+      <div class="org">ByBorg Enterprises · Budapest</div>
+      <ul>
+        <li>Built and deployed a lightweight multi-label image-tagging model trained on synthetic VLM/LLM labels.</li>
+        <li>Fine-tuned VLMs with Megatron-DeepSpeed (tensor + pipeline parallelism, ZeRO-3) for large-scale tagging and captioning.</li>
+        <li>Designed a low-shot, identity-preserving image generator (LCM-SDXL + IP-Adapter + ControlNet).</li>
+        <li>Developed text-to-video pipelines using WAN-based models and LoRA.</li>
+        <li>Shipped a face age-estimation service (fine-tuned AuraFace, served via FastAPI).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="title">AI Research Engineer</span><span class="when">2022 — 2024</span></div>
+      <div class="org">Zhejiang Lab · Hangzhou</div>
+      <ul>
+        <li>Improved conditional face synthesis with greater diversity using Stable Diffusion and LoRA.</li>
+        <li>Built an AI onboarding assistant with LangChain, GPT-4, RAG, ChromaDB, and FastAPI.</li>
+        <li>Fine-tuned LLaMA for scientific-paper summarization and Q&A.</li>
+        <li>Published explainable CV research (hyperbolic deep network, ViT-based interpretable embeddings).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="title">AI Research Engineer</span><span class="when">2017 — 2022</span></div>
+      <div class="org">Shanghai ERC of Big Data · Shanghai</div>
+      <ul>
+        <li>Built VAE- and GAN-based models for image editing, makeup transfer, and masked-face inpainting.</li>
+        <li>Shipped real-time emotion- and face-recognition systems with PyTorch, OpenCV, and Docker.</li>
+        <li>Delivered forecasting models with XGBoost and scikit-learn; advanced facial-attractiveness research and released a labeled dataset.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><span class="title">Earlier — Software Engineering &amp; Team Leadership</span><span class="when">2006 — 2014</span></div>
+      <div class="org">Schneider Group · Yandex · Russia</div>
+      <ul>
+        <li>Owned the full software development lifecycle, designed SQL databases, and mentored engineering teams.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Publications</h2>
+    <div class="pub">
+      <div class="pt">GAN Semantics for Personalized Facial Beauty Synthesis and Enhancement</div>
+      <div class="pv">Journal of Visual Communication and Image Representation, 2025 · <a href="#">Paper</a></div>
+    </div>
+    <div class="pub">
+      <div class="pt">Interpretable Image Recognition in Hyperbolic Space</div>
+      <div class="pv">APSIPA ASC, 2023 · <a href="#">Paper</a></div>
+    </div>
+    <div class="pub">
+      <div class="pt">Facial Attractiveness Assessment: A Meta-Learning Approach</div>
+      <div class="pv">The Visual Computer, 2022 · <a href="#">Paper</a></div>
+    </div>
+    <div class="pub">
+      <div class="pt">MEBeauty: A Multi-Ethnic Facial Beauty Dataset in the Wild</div>
+      <div class="pv">Neural Computing &amp; Applications, 2022 · <a href="#">Paper</a></div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Technical Stack</h2>
+    <p><span class="label">AI / ML:</span> Transformers, Diffusion, GANs, LLMs, VLMs, RAG, LoRA</p>
+    <p><span class="label">Frameworks:</span> PyTorch, Hugging Face, DeepSpeed, Megatron, vLLM, ONNX, TensorRT</p>
+    <p><span class="label">Engineering:</span> Python, FastAPI, Triton, Docker, Git, Linux, CI/CD, AWS, SQL</p>
+    <p><span class="label">Experimentation:</span> Weights &amp; Biases, NumPy, Pandas, scikit-learn, OpenCV</p>
+  </section>
+
+  <section class="edu">
+    <h2>Education &amp; Languages</h2>
+    <p><span class="label">PhD, Computer Science</span> — East China University of Science and Technology</p>
+    <p><span class="label">MSc, Computer Science</span> — Shanghai Jiao Tong University</p>
+    <p><span class="label">BEng, Computer Science &amp; Engineering</span> — National Research Nuclear University MEPhI</p>
+    <p style="margin-top:16px"><span class="label">Languages:</span> English (fluent) · Russian (native) · Chinese (professional) · German (working)</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Open to collaborations in generative AI, multimodal learning, and applied research.<br>
+    <a href="mailto:dr.irina.lebedeva@gmail.com">dr.irina.lebedeva@gmail.com</a></p>
+  </section>
+
+  <footer>Irina Lebedeva, PhD · Budapest</footer>
+
+</div>
+</body>
+</html>
