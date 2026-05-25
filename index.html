@@ -32,7 +32,10 @@
   .wrap{max-width:var(--max);margin:0 auto;padding:72px 24px 96px}
 
   /* header */
-  header{margin-bottom:8px}
+  header{display:flex;align-items:center;gap:30px;margin-bottom:8px}
+  .avatar{width:124px;height:124px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--line)}
+  .header-text{min-width:0}
+  @media(max-width:560px){header{flex-direction:column;align-items:flex-start;gap:20px}.avatar{width:104px;height:104px}}
   h1{font-size:40px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
   .role{color:var(--muted);font-size:19px;margin-top:6px}
   .links{margin-top:18px;font-size:16px;color:var(--muted)}
@@ -76,20 +79,23 @@
 <div class="wrap">
 
   <header>
-    <h1>Irina Lebedeva, PhD</h1>
-    <div class="role">Senior AI Research Engineer · Budapest, Hungary</div>
-    <div class="links">
-      <a href="mailto:dr.irina.lebedeva@gmail.com">Email</a>
-      <a href="https://scholar.google.com/citations?user=_gAsLfcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="https://www.linkedin.com/in/ailina/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/dr-irina-lebedeva" target="_blank" rel="noopener">GitHub</a>
+    <img class="avatar" src="photo.jpg" alt="Irina Lebedeva">
+    <div class="header-text">
+      <h1>Irina Lebedeva, PhD</h1>
+      <div class="role">Senior AI Research Engineer · Budapest, Hungary</div>
+      <div class="links">
+        <a href="mailto:dr.irina.lebedeva@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=_gAsLfcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/ailina/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/dr-irina-lebedeva" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </header>
 
   <section>
     <h2>About</h2>
-    <p>I build AI systems that survive contact with production — and I publish the research behind them. Equal parts researcher and engineer, with a PhD in Computer Science and 100+ citations in generative modeling and computer vision, I work across the full arc — fine-tuning frontier models, designing retrieval pipelines, and shipping low-latency inference services that hold up at scale.</p>
-    <p>My recent work spans LLM and vision-language fine-tuning, diffusion-based image and video generation, and interpretable computer vision. I'm most useful where research, engineering, and product meet: taking an advanced method and making it dependable enough to deploy.</p>
+    <p>I'm an AI researcher and engineer working at the seam between the two — where a new method becomes a system people can actually rely on. Backed by a PhD in Computer Science and 100+ citations in generative modeling and computer vision, I fine-tune large models, design retrieval pipelines, and ship inference services that stay fast and stable in production.</p>
+    <p>My recent focus has been LLM and vision-language fine-tuning, diffusion-based image and video generation, and interpretable computer vision. I'm at my best closing the gap between research and product — turning a promising result into a system that's dependable enough to deploy and run at scale.</p>
   </section>
 
   <section>
@@ -147,6 +153,13 @@
     </div>
   </section>
 
+  <section class="edu">
+    <h2>Education</h2>
+    <p><span class="label">PhD, Computer Science</span> — East China University of Science and Technology</p>
+    <p><span class="label">MSc, Computer Science</span> — Shanghai Jiao Tong University</p>
+    <p><span class="label">BEng, Computer Science &amp; Engineering</span> — National Research Nuclear University MEPhI</p>
+  </section>
+
   <section>
     <h2>Selected Publications</h2>
     <div class="pub">
@@ -175,12 +188,9 @@
     <p><span class="label">Experimentation:</span> Weights &amp; Biases, NumPy, Pandas, scikit-learn, OpenCV</p>
   </section>
 
-  <section class="edu">
-    <h2>Education &amp; Languages</h2>
-    <p><span class="label">PhD, Computer Science</span> — East China University of Science and Technology</p>
-    <p><span class="label">MSc, Computer Science</span> — Shanghai Jiao Tong University</p>
-    <p><span class="label">BEng, Computer Science &amp; Engineering</span> — National Research Nuclear University MEPhI</p>
-    <p style="margin-top:16px"><span class="label">Languages:</span> English (fluent) · Russian (native) · Chinese (professional)</p>
+  <section>
+    <h2>Languages</h2>
+    <p>English (fluent) · Russian (native) · Chinese (professional)</p>
   </section>
 
   <section>
