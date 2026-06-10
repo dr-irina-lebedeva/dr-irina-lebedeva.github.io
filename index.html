@@ -12,7 +12,7 @@
 <!-- Open Graph: controls how the link looks when shared on LinkedIn, Slack, etc. -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Irina Lebedeva, PhD — Senior AI Research Engineer">
-<meta property="og:description" content="Generative AI, LLMs/VLMs, computer vision, and production ML. PhD in Computer Science, 100+ citations.">
+<meta property="og:description" content="Senior ML Engineer and AI Researcher with 8+ years across production ML, generative AI, computer vision, and applied research. PhD in Computer Science, 100+ citations.">
 <meta property="og:url" content="https://dr-irina-lebedeva.github.io/">
 <meta property="og:image" content="https://dr-irina-lebedeva.github.io/photo.jpg">
 <meta property="og:site_name" content="Irina Lebedeva">
@@ -20,11 +20,11 @@
 <!-- Twitter / X card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Irina Lebedeva, PhD — Senior AI Research Engineer">
-<meta name="twitter:description" content="Generative AI, LLMs/VLMs, computer vision, and production ML. PhD in Computer Science, 100+ citations.">
+<meta name="twitter:description" content="Senior ML Engineer and AI Researcher with 8+ years across production ML, generative AI, computer vision, and applied research. PhD in Computer Science, 100+ citations.">
 <meta name="twitter:image" content="https://dr-irina-lebedeva.github.io/photo.jpg">
 
 <!-- Favicon (inline, no extra file needed) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%239a4221'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Georgia,serif'%20font-size='34'%20fill='%23f4efe4'%20text-anchor='middle'%3EIL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%230b1220'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Georgia,serif'%20font-size='34'%20fill='%2367e8f9'%20text-anchor='middle'%3EIL%3C/text%3E%3C/svg%3E">
 
 <!-- Structured data: tells search engines this page is your professional profile -->
 <script type="application/ld+json">
@@ -54,72 +54,197 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fbfaf7;
-    --text:#1d1b17;
-    --muted:#6f6a60;
-    --accent:#9a4221;
-    --line:#e6e1d6;
-    --max:760px;
+    --bg:#070b14;
+    --bg2:#0c1324;
+    --panel:rgba(15,23,42,.72);
+    --panel2:rgba(15,23,42,.48);
+    --text:#eef6ff;
+    --muted:#9aa8bd;
+    --soft:#cbd5e1;
+    --accent:#67e8f9;
+    --accent2:#a78bfa;
+    --line:rgba(148,163,184,.22);
+    --glow:rgba(103,232,249,.18);
+    --max:880px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
   body{
-    background:var(--bg);
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 16% 8%, rgba(103,232,249,.15), transparent 28%),
+      radial-gradient(circle at 84% 14%, rgba(167,139,250,.18), transparent 30%),
+      linear-gradient(135deg, var(--bg) 0%, var(--bg2) 54%, #050816 100%);
     color:var(--text);
-    font-family:"Newsreader",Georgia,serif;
-    font-size:18px;
-    line-height:1.65;
+    font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.72;
     -webkit-font-smoothing:antialiased;
   }
-  a{color:var(--accent);text-decoration:none}
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.28;
+    background-image:
+      linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image:linear-gradient(to bottom, black, transparent 82%);
+  }
+  a{color:var(--accent);text-decoration:none;text-underline-offset:4px}
   a:hover{text-decoration:underline}
 
-  .wrap{max-width:var(--max);margin:0 auto;padding:72px 24px 96px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:72px 24px 96px;position:relative}
+  .wrap::before{
+    content:"AI / CV / LLM / VLM / RAG / LoRA";
+    display:inline-block;
+    margin-bottom:26px;
+    padding:6px 12px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    color:var(--accent);
+    background:rgba(103,232,249,.06);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    box-shadow:0 0 28px var(--glow);
+  }
 
   /* header */
-  header{display:flex;align-items:center;gap:30px;margin-bottom:8px}
-  .avatar{width:124px;height:124px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--line)}
+  header{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    margin-bottom:10px;
+    padding:28px;
+    border:1px solid var(--line);
+    border-radius:28px;
+    background:linear-gradient(135deg, rgba(15,23,42,.78), rgba(15,23,42,.42));
+    box-shadow:0 24px 80px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.05);
+    backdrop-filter:blur(14px);
+  }
+  .avatar{
+    width:132px;
+    height:132px;
+    border-radius:28px;
+    object-fit:cover;
+    flex-shrink:0;
+    border:1px solid rgba(103,232,249,.38);
+    box-shadow:0 0 0 6px rgba(103,232,249,.06), 0 0 45px rgba(103,232,249,.18);
+  }
   .header-text{min-width:0}
-  @media(max-width:560px){header{flex-direction:column;align-items:flex-start;gap:20px}.avatar{width:104px;height:104px}}
-  h1{font-size:40px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
-  .role{color:var(--muted);font-size:19px;margin-top:6px}
-  .links{margin-top:18px;font-size:16px;color:var(--muted)}
-  .links a{margin-right:18px}
+  h1{
+    font-family:"Newsreader",Georgia,serif;
+    font-size:48px;
+    font-weight:600;
+    letter-spacing:-.035em;
+    line-height:1.02;
+  }
+  .role{color:var(--soft);font-size:17px;margin-top:10px}
+  .links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--muted)}
+  .links a{
+    margin-right:0;
+    padding:7px 11px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:rgba(255,255,255,.035);
+  }
 
   /* sections */
-  section{margin-top:52px}
+  section{margin-top:44px}
   h2{
-    font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
-    color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:var(--accent);
+    padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:22px;
   }
-  p{margin-bottom:16px}
+  h2::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 18px var(--accent);
+  }
+  p{margin-bottom:16px;color:var(--soft)}
   p:last-child{margin-bottom:0}
 
   /* experience */
-  .job{margin-bottom:30px}
+  .job{
+    margin-bottom:18px;
+    padding:22px 24px;
+    border:1px solid var(--line);
+    border-radius:22px;
+    background:linear-gradient(135deg, var(--panel), var(--panel2));
+    box-shadow:0 16px 48px rgba(0,0,0,.22);
+  }
   .job:last-child{margin-bottom:0}
-  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;align-items:baseline}
-  .job .title{font-weight:600;font-size:19px}
-  .job .when{color:var(--muted);font-size:15px}
-  .job .org{color:var(--accent);font-size:16px;margin-bottom:8px}
+  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 18px;align-items:baseline}
+  .job .title{font-weight:700;font-size:18px;color:var(--text)}
+  .job .when{color:var(--muted);font-size:13px;font-weight:600;letter-spacing:.04em}
+  .job .org{color:var(--accent);font-size:14px;margin:4px 0 12px}
   ul{list-style:none}
-  li{position:relative;padding-left:18px;margin-bottom:7px;color:#3a352d}
-  li::before{content:"–";position:absolute;left:0;color:var(--accent)}
+  li{position:relative;padding-left:22px;margin-bottom:8px;color:var(--soft)}
+  li::before{
+    content:"›";
+    position:absolute;
+    left:0;
+    top:-1px;
+    color:var(--accent);
+    font-weight:700;
+    text-shadow:0 0 12px var(--accent);
+  }
 
   /* publications */
-  .pub{margin-bottom:16px}
-  .pub .pt{font-weight:500}
-  .pub .pv{color:var(--muted);font-size:15px}
+  .pub{
+    margin-bottom:14px;
+    padding:16px 18px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:rgba(15,23,42,.42);
+  }
+  .pub .pt{font-weight:600;color:var(--text)}
+  .pub .pv{color:var(--muted);font-size:14px;margin-top:3px}
 
   /* simple lists */
-  .stack p,.edu p{margin-bottom:10px}
-  .label{font-weight:600}
+  .stack p,.edu p{
+    margin-bottom:10px;
+    padding:12px 14px;
+    border:1px solid rgba(148,163,184,.14);
+    border-radius:14px;
+    background:rgba(15,23,42,.34);
+  }
+  .label{font-weight:700;color:var(--text)}
 
-  footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  footer{
+    margin-top:64px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:13px;
+  }
 
-  @media(max-width:560px){h1{font-size:32px}.wrap{padding:48px 20px 72px}}
+  @media(max-width:640px){
+    .wrap{padding:40px 18px 72px}
+    header{flex-direction:column;align-items:flex-start;gap:22px;padding:22px;border-radius:24px}
+    .avatar{width:112px;height:112px;border-radius:22px}
+    h1{font-size:36px}
+    .role{font-size:16px}
+    .job{padding:18px}
+  }
 </style>
 </head>
 <body>
@@ -150,17 +275,17 @@
 
     <div class="job">
       <div class="top"><span class="title">Senior ML Engineer</span><span class="when">2026 — Present</span></div>
-      <div class="org"><a href="https://raiqon.com" target="_blank" rel="noopener">Raiqon AI</a> · Budapest</div>
+      <div class="org"><a href="https://raiqon.com" target="_blank" rel="noopener">Raiqon AI</a> · Budapest, Hungary</div>
       <ul>
-        <li>Fine-tune LLMs for automotive requirements engineering using Qwen and LoRA.</li>
-        <li>Drove a 30% relative gain in accuracy via synthetic data, hyperparameter tuning, and pipeline work.</li>
-        <li>Deploy scalable LLM inference pipelines with vLLM, LoRAX, and Docker.</li>
+        <li>Fine-tuned LLMs with LoRA for automotive requirements engineering, improving model accuracy by 30%.</li>
+        <li>Achieved accuracy gains through synthetic data generation, targeted dataset refinement, hyperparameter tuning, and evaluation-driven iteration.</li>
+        <li>Developed robust training and evaluation pipelines to identify model weaknesses and improve domain-specific performance.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="top"><span class="title">Senior ML Engineer</span><span class="when">2025 — 2026</span></div>
-      <div class="org"><a href="https://doclerholding.com" target="_blank" rel="noopener">Docler Holding</a> · Budapest</div>
+      <div class="org"><a href="https://doclerholding.com" target="_blank" rel="noopener">Docler Holding</a> · Budapest, Hungary</div>
       <ul>
         <li>Built and deployed a lightweight multi-label image-tagging model trained on synthetic VLM/LLM labels.</li>
         <li>Fine-tuned VLMs with Megatron-DeepSpeed (tensor + pipeline parallelism, ZeRO-3) for large-scale tagging and captioning.</li>
@@ -171,19 +296,19 @@
     </div>
 
     <div class="job">
-      <div class="top"><span class="title">AI Research Engineer</span><span class="when">2022 — 2024</span></div>
-      <div class="org"><a href="https://en.zhejianglab.com" target="_blank" rel="noopener">Zhejiang Lab</a> · Hangzhou</div>
+      <div class="top"><span class="title">Postdoctoral Researcher in AI</span><span class="when">2022 — 2024</span></div>
+      <div class="org"><a href="https://en.zhejianglab.com" target="_blank" rel="noopener">Zhejiang Lab</a> · Hangzhou, China</div>
+      <p>While primarily an engineering role — from system design to deployment and production — it also involved research: successfully defended postdoctoral research on computer vision, hyperbolic deep learning, and interpretable AI, and published peer-reviewed papers.</p>
+      <p>Engineering work included, but was not limited to:</p>
       <ul>
-        <li>Improved conditional face synthesis with greater diversity using Stable Diffusion and LoRA.</li>
-        <li>Built an AI onboarding assistant with LangChain, GPT-4, RAG, ChromaDB, and FastAPI.</li>
-        <li>Fine-tuned LLaMA for scientific-paper summarization and Q&A.</li>
-        <li>Published explainable CV research (hyperbolic deep network, ViT-based interpretable embeddings).</li>
+        <li>Fine-tuned generative diffusion models using Stable Diffusion and LoRA for conditional face synthesis with improved cultural and social diversity.</li>
+        <li>Built and deployed an AI onboarding assistant using LangChain, GPT-4, RAG, ChromaDB, and FastAPI, and fine-tuned LLaMA for paper summarization and QA.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="top"><span class="title">AI Research Engineer</span><span class="when">2017 — 2022</span></div>
-      <div class="org">Shanghai ERC of Big Data · Shanghai</div>
+      <div class="org">Shanghai ERC of Big Data · Shanghai, China</div>
       <ul>
         <li>Built VAE- and GAN-based models for image editing, makeup transfer, and masked-face inpainting.</li>
         <li>Shipped real-time emotion- and face-recognition systems with PyTorch, OpenCV, and Docker.</li>
@@ -193,7 +318,7 @@
 
     <div class="job">
       <div class="top"><span class="title">Earlier — Software Engineering &amp; Team Leadership</span><span class="when">2006 — 2014</span></div>
-      <div class="org">Schneider Group · <a href="https://www.yandex.com" target="_blank" rel="noopener">Yandex</a> · Russia</div>
+      <div class="org">Schneider Group · <a href="https://www.yandex.com" target="_blank" rel="noopener">Yandex</a> · Moscow, Russia</div>
       <ul>
         <li>Owned the full software development lifecycle, designed SQL databases, and mentored engineering teams.</li>
       </ul>
@@ -202,9 +327,9 @@
 
   <section class="edu">
     <h2>Education</h2>
-    <p><span class="label">PhD, Computer Science</span> — East China University of Science and Technology</p>
-    <p><span class="label">MSc, Computer Science</span> — Shanghai Jiao Tong University</p>
-    <p><span class="label">BEng, Computer Science &amp; Engineering</span> — National Research Nuclear University MEPhI</p>
+    <p><span class="label">PhD, Computer Science</span> — East China University of Science and Technology, China</p>
+    <p><span class="label">MSc, Computer Science</span> — Shanghai Jiao Tong University, China</p>
+    <p><span class="label">BEng, Computer Science &amp; Engineering</span> — National Research Nuclear University MEPhI, Russia</p>
   </section>
 
   <section>
@@ -246,7 +371,7 @@
     <a href="mailto:dr.irina.lebedeva@gmail.com">dr.irina.lebedeva@gmail.com</a></p>
   </section>
 
-  <footer>Irina Lebedeva, PhD · Budapest</footer>
+  <footer>Irina Lebedeva · Budapest, Hungary · 2026</footer>
 
 </div>
 </body>
