@@ -269,6 +269,10 @@
   .proj .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);margin-bottom:6px}
 
   @media(max-width:640px){.news li{grid-template-columns:1fr;gap:2px}}
+  .proj-wide{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:center}
+  .proj-wide .poster{display:block}
+  .proj-wide .poster img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+  @media(max-width:640px){.proj-wide{grid-template-columns:1fr}.proj-wide .poster{max-width:360px}}
 </style>
 </head>
 <body>
@@ -278,15 +282,14 @@
     <img class="avatar" src="photo.jpg" alt="Irina Lebedeva">
     <div class="header-text">
       <h1>Irina Lebedeva, PhD</h1>
-      <div class="role">Senior AI Research Engineer · LLMs, Computer Vision &amp; Multimodal AI<br>Budapest, Hungary · Open to relocation</div>
+      <div class="role">Senior AI Research Engineer · LLMs, Computer Vision &amp; Multimodal AI<br>Budapest, Hungary</div>
       <div class="links">
-        <a href="mailto:dr.irina.lebedeva@gmail.com">Email</a>
-        <a href="https://scholar.google.com/citations?user=_gAsLfcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://www.linkedin.com/in/ailina/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=_gAsLfcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://github.com/dr-irina-lebedeva" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://huggingface.co/dr-irina-lebedeva" target="_blank" rel="noopener">Hugging Face</a>
-        <a href="https://www.instagram.com/dr.irina.lebedeva/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://huggingface.co/dr-irina-lebedeva" target="_blank" rel="noopener">HF</a>
         <a href="https://www.youtube.com/@dr.irina.lebedeva" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/dr.irina.lebedeva/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
   </header>
@@ -297,8 +300,9 @@
 
   <section id="about">
     <h2>About</h2>
-    <p>Senior AI Research Engineer with 8+ years in LLMs, multimodal and generative AI, computer vision, and production ML. PhD in Computer Science with Q1 journal publications and 130+ Google Scholar citations. I take research from paper to production.</p>
-    <p>I have worked at AI startups, research labs, and industry teams, and I started my career as a software engineer and team lead. I serve as a peer reviewer for NeurIPS and ECCV.</p>
+    <p>💡 Senior AI Research Engineer with 8+ years of experience across LLMs, multimodal and generative AI, computer vision, and production ML.</p>
+    <p>🎓 PhD in Computer Science with peer-reviewed Q1 publications and 130+ Google Scholar citations. Experienced in bridging research and engineering.</p>
+    <p>🚀 Background includes work at AI startups, research labs, and industry teams, as well as earlier software engineering experience with team leadership.</p>
   </section>
 
   <section id="experience">
@@ -404,16 +408,21 @@
     <h2>Projects</h2>
     <div class="projects">
       <div class="proj" style="grid-column:1/-1">
-        <span class="tag">Dataset · Benchmark · Model</span>
-        <div class="pt">MEBeauty: Human Aesthetic Preference Dataset &amp; Benchmark</div>
-        <p>A multi-ethnic facial beauty dataset collected in the wild, with human attractiveness ratings, first published in 2022 and now fully open and reproducible.</p>
-        <ul>
-          <li><b><a href="https://huggingface.co/datasets/dr-irina-lebedeva/MEBeauty-Facial-Beauty-Prediction" target="_blank" rel="noopener">Dataset</a>:</b> about 2,500 faces from six ethnic groups, of different genders and ages, cleaned, with person-level splits and an improved label.</li>
-          <li><b><a href="https://github.com/dr-irina-lebedeva/MEBeauty-Benchmark" target="_blank" rel="noopener">Benchmark</a>:</b> 21 methods, from 2006 to today's foundation models, including my own approach, all under one protocol.</li>
-          <li><b><a href="https://huggingface.co/dr-irina-lebedeva/MEBeauty-FBP-models" target="_blank" rel="noopener">Reference model</a>:</b> a DINOv2-based model, ready to use in two lines of Python, with its accuracy across ethnic groups reported openly.</li>
-          <li><b><a href="https://link.springer.com/article/10.1007/s00521-021-06535-0" target="_blank" rel="noopener">Publication</a>:</b> the original peer-reviewed paper, "MEBeauty: A Multi-Ethnic Facial Beauty Dataset in the Wild", Neural Computing &amp; Applications, 2022.</li>
-        </ul>
-        <p style="margin-top:10px;font-size:13px;color:var(--muted)">For non-commercial academic research only.</p>
+        <div class="proj-wide">
+          <a class="poster" href="mebeauty-poster.jpg" target="_blank" rel="noopener"><img src="mebeauty-poster.jpg" alt="MEBeauty poster: dataset, benchmark and reference model" loading="lazy" width="1122" height="1402"></a>
+          <div>
+            <span class="tag">Dataset · Benchmark · Model</span>
+            <div class="pt">MEBeauty: Human Aesthetic Preference Dataset &amp; Benchmark</div>
+            <p>A multi-ethnic facial beauty dataset collected in the wild, with human attractiveness ratings, first published in 2022 and now fully open and reproducible.</p>
+            <ul>
+              <li><b><a href="https://huggingface.co/datasets/dr-irina-lebedeva/MEBeauty-Facial-Beauty-Prediction" target="_blank" rel="noopener">Dataset</a>:</b> about 2,500 faces from six ethnic groups, of different genders and ages, cleaned, with person-level splits and an improved label.</li>
+              <li><b><a href="https://github.com/dr-irina-lebedeva/MEBeauty-Benchmark" target="_blank" rel="noopener">Benchmark</a>:</b> 21 methods, from 2006 to today's foundation models, including my own approach, all under one protocol.</li>
+              <li><b><a href="https://huggingface.co/dr-irina-lebedeva/MEBeauty-FBP-models" target="_blank" rel="noopener">Reference model</a>:</b> a DINOv2-based model, ready to use in two lines of Python, with its accuracy across ethnic groups reported openly.</li>
+              <li><b><a href="https://link.springer.com/article/10.1007/s00521-021-06535-0" target="_blank" rel="noopener">Publication</a>:</b> the original peer-reviewed paper, "MEBeauty: A Multi-Ethnic Facial Beauty Dataset in the Wild", Neural Computing &amp; Applications, 2022.</li>
+            </ul>
+            <p style="margin-top:10px;font-size:13px;color:var(--muted)">For non-commercial academic research only.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -430,7 +439,7 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Open to research and engineering roles in LLM post-training, multimodal AI, and efficient AI, and to research collaborations. Open to relocation.<br>
+    <p>Open to research and engineering roles in LLM post-training, multimodal AI, and efficient AI, and to research collaborations.<br>
     <a href="mailto:dr.irina.lebedeva@gmail.com">dr.irina.lebedeva@gmail.com</a></p>
   </section>
 
